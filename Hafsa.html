@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog Page</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #000 !important;
+        }
+        .header-section {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .blog-meta i {
+            margin-right: 5px;
+        }
+        .blog-image {
+            max-height: 450px; /* Adjust this value based on your desired height */
+            width: 100%;
+            object-fit: cover; /* Maintains aspect ratio while covering the area */
+            position: relative;
+            display: block;
+        }
+        .overlay-text {
+    position: absolute;
+    bottom: 40px;
+    left: 380px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+        .blog-content {
+            padding: 20px 0;
+        }
+        .blog-content p {
+            line-height: 1.6;
+        }
+        .sidebar {
+            padding: 20px 0;
+        }
+        .category-list .list-group-item {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            margin-bottom: 5px;
+        }
+        .category-list .list-group-item i {
+            margin-right: 10px;
+        }
+        .popular-posts img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .share-section {
+            margin: 20px 0;
+        }
+        .share-section i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        .comment-section {
+            margin: 20px 0;
+        }
+        .footer {
+            background-color: #212529;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social-icons i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        .footer .newsletter input {
+            background-color: #343a40;
+            border: none;
+            color: #fff;
+        }
+        .footer .newsletter button {
+            background-color: #ffc107;
+            border: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">LOGO HERE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section
+    <div class="header-section">
+        <div class="container">
+            <h1 class="text-success">SINGLE BLOG</h1>
+            <img src="blog_image.png" alt="Blog Image" class="blog-image img-fluid my-3">
+            <h2>Contrary to popular belief, Lorem</h2>
+            <div class="blog-meta">
+                <span><i class="bi bi-person"></i> By Admin</span> |
+                <span><i class="bi bi-heart"></i> (2018)</span> |
+                <span><i class="bi bi-chat"></i> (2456)</span> |
+                <span><i class="bi bi-eye"></i> (13)</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- Header Section -->
+<div class="header-section">
+    <div class="container">
+        <h1 class="text-success">SINGLE BLOG</h1>
+        <div class="image-container">
+            <img src="blog_image.png" alt="Blog Image" class="blog-image img-fluid my-3">
+            <div class="overlay-text">Contrary to popular belief, Lorem</div>
+        </div>
+        <div class="blog-meta">
+            <span><i class="bi bi-person"></i> By Admin</span> |
+            <span><i class="bi bi-heart"></i> (2018)</span> |
+            <span><i class="bi bi-chat"></i> (2456)</span> |
+            <span><i class="bi bi-eye"></i> (13)</span>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Main Content and Sidebar -->
+    <div class="container blog-content">
+        <div class="row">
+            <!-- Blog Content -->
+            <div class="col-lg-8">
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
+                <h3>Contrary to popular belief</h3>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem ipsum, was my biggest one.</p>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem ipsum, was my biggest one.</p>
+                <h3>Contrary to popular belief</h3>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem ipsum, was my biggest one.</p>
+
+                <!-- Share Section -->
+                <div class="share-section">
+                    <h5>Share:</h5>
+                    <a href="#"><i class="bi bi-facebook text-primary"></i></a>
+                    <a href="#"><i class="bi bi-twitter text-info"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-primary"></i></a>
+                    <a href="#"><i class="bi bi-pinterest text-danger"></i></a>
+                    <a href="#"><i class="bi bi-google text-danger"></i></a>
+                </div>
+
+                <!-- Comment Section -->
+                <div class="comment-section">
+                    <h5>Leave a Reply</h5>
+                    <p>Your email address will not be published. Required fields are marked *</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment *</label>
+                            <textarea class="form-control" id="comment" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="website" class="form-label">Website</label>
+                            <input type="url" class="form-control" id="website">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="notifyComments">
+                            <label class="form-check-label" for="notifyComments">Notify me of follow-up comments by email.</label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="notifyPosts">
+                            <label class="form-check-label" for="notifyPosts">Notify me of new posts by email.</label>
+                        </div>
+                        <button type="submit" class="btn btn-success">POST COMMENT</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 sidebar">
+                <!-- Blog Categories -->
+                <h5>Blog Categories</h5>
+                <div class="category-list">
+                    <a href="#" class="list-group-item"><i class="bi bi-person"></i> Personal Finance</a>
+                    <a href="#" class="list-group-item"><i class="bi bi-lightbulb"></i> Investing</a>
+                    <a href="#" class="list-group-item"><i class="bi bi-briefcase"></i> Entrepreneurship</a>
+                    <a href="#" class="list-group-item"><i class="bi bi-person"></i> Personal Finance</a>
+                    <a href="#" class="list-group-item"><i class="bi bi-lightbulb"></i> Investing</a>
+                </div>
+
+                <!-- Popular Posts -->
+                <h5 class="mt-4">Popular Posts</h5>
+                <div class="popular-posts">
+                    <div class="d-flex mb-3">
+                        <img src="hafsa2.png" alt="Post Image">
+                        <div>
+                            <h6>The are many variations of passages of Lorem</h6>
+                            <p class="blog-meta"><i class="bi bi-person"></i> Admin <i class="bi bi-chat"></i> (13)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <img src="hafsa3.png" alt="Post Image">
+                        <div>
+                            <h6>The are many variations of passages of Lorem</h6>
+                            <p class="blog-meta"><i class="bi bi-person"></i> Admin <i class="bi bi-chat"></i> (13)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <img src="hafsa2.png" alt="Post Image">
+                        <div>
+                            <h6>The are many variations of passages of Lorem</h6>
+                            <p class="blog-meta"><i class="bi bi-person"></i> Admin <i class="bi bi-chat"></i> (13)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <img src="hafsa.png" alt="Post Image">
+                        <div>
+                            <h6>The are many variations of passages of Lorem</h6>
+                            <p class="blog-meta"><i class="bi bi-person"></i> Admin <i class="bi bi-chat"></i> (13)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>FOLLOW US</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 newsletter">
+                    <h5>NEWSLETTER</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn" type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2017 - COMPANY NAME, ALL RIGHTS RESERVED. <a href="#">PRIVACY POLICY</a></p>
+                <p>DESIGN BY <a href="#">HPSDESIGN</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
